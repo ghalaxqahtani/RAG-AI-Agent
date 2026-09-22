@@ -33,7 +33,7 @@ LLM
       ↓
 Generated Answer
 
-Features
+### Features
 PDF document ingestion
 Document embeddings
 Semantic similarity search
@@ -44,7 +44,8 @@ FastAPI backend
 NVIDIA-compatible LLM integration
 Configurable document collection
 Local vector index generation
-Technologies
+
+### Technologies
 Python
 LangChain
 FAISS
@@ -54,6 +55,7 @@ NVIDIA NIM-compatible models
 PyMuPDF
 Pydantic
 
+### Project Structure
 rag-document-chatbot/
 │
 ├── app/
@@ -74,7 +76,7 @@ rag-document-chatbot/
 ├── README.md
 └── requirements.txt
 
-Training & Practical Application
+### Training & Practical Application
 This project was developed as a practical application of concepts learned through NVIDIA Deep Learning Institute (DLI) training in Building RAG Agents with LLMs.
 The training covered concepts including:
 
@@ -87,7 +89,8 @@ Document-based chatbots
 RAG evaluation concepts
 LLM integration
 The repository presents a standalone project structure based on these concepts rather than including the NVIDIA DLI course notebooks, course solutions, or course-provided document index.
-Setup
+
+### Setup
 1. Clone the repository
 git clone https://github.com/ghalaxqahtani/rag-document-chatbot.git
 cd rag-document-chatbot
@@ -107,24 +110,24 @@ cp .env.example .env
 Then add your NVIDIA API key:
 NVIDIA_API_KEY=your_nvidia_api_key_here
 Do not commit your actual API key to GitHub.
-Adding Documents
+### Adding Documents
 Place your own PDF files inside:
 data/
 The repository intentionally does not include NVIDIA DLI course documents or a course-provided vector index.
-Build the Vector Index
+### Build the Vector Index
 After adding your PDF documents, run:
 python scripts/build_index.py
 This creates the local FAISS index used by the retrieval pipeline.
 The generated vector index is intentionally excluded from Git tracking.
 
-Run the API
+### Run the API
 Start the FastAPI server with:
 uvicorn app.server:app --reload
 The API can then be accessed locally through:
 http://127.0.0.1:8000
 The health endpoint is:
 GET /health
-How It Works
+### How It Works
 When a user submits a question:
 The question is converted into an embedding.
 FAISS searches the document vector index for semantically relevant content.
@@ -132,7 +135,7 @@ The most relevant document chunks are retrieved.
 The retrieved context is passed to the language model.
 The model generates an answer based on the available document context.
 This approach helps the chatbot answer questions using information contained in the user's documents.
-Data and Privacy
+### Data and Privacy
 User-provided documents are not included in this repository.
 The repository also excludes:
 
@@ -142,7 +145,7 @@ Pickle files
 Environment files
 API keys
 See .gitignore for the complete list of excluded files.
-Learning Outcome
+### Learning Outcome
 Through this project, I applied practical concepts related to:
 Large Language Models
 Retrieval-Augmented Generation
