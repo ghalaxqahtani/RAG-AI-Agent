@@ -15,7 +15,7 @@ This project implements a practical RAG pipeline for document-based question ans
 Instead of relying only on the language model's internal knowledge, the system retrieves relevant information from the user's documents and provides that context to the language model before generating an answer.
 
 ### RAG Workflow
-
+```text
 
 PDF Documents
       ↓
