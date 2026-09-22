@@ -1,7 +1,34 @@
-# Documents
+# RAG Document Chatbot
 
-Place the PDF documents you want the chatbot to search in this directory.
+A document question-answering chatbot built using Retrieval-Augmented Generation (RAG).
 
-The repository intentionally does not include the NVIDIA DLI course documents or course-provided vector index.
+The project allows users to add their own PDF documents, build a searchable vector index, retrieve relevant document content, and generate answers based on the retrieved context.
 
-Run `python scripts/build_index.py` after adding your own documents.
+![RAG Document Chatbot](assets/rag-agent-demo.png)
+
+---
+
+## Project Overview
+
+This project implements a practical RAG pipeline for document-based question answering.
+
+Instead of relying only on the language model's internal knowledge, the system retrieves relevant information from the user's documents and provides that context to the language model before generating an answer.
+
+### RAG Workflow
+
+```text
+PDF Documents
+      ↓
+Document Processing
+      ↓
+Embeddings
+      ↓
+FAISS Vector Store
+      ↓
+Semantic Retrieval
+      ↓
+Relevant Document Context
+      ↓
+LLM
+      ↓
+Generated Answer
