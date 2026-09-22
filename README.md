@@ -32,6 +32,7 @@ Relevant Document Context
 LLM
       ↓
 Generated Answer
+```text
 
 Features
 PDF document ingestion
