@@ -32,27 +32,9 @@ Relevant Document Context
 LLM
       ↓
 Generated Answer
-Features
-PDF document ingestion
-Document embeddings
-Semantic similarity search
-FAISS vector store
-Retrieval-Augmented Generation (RAG)
-Context-based question answering
-FastAPI backend
-NVIDIA-compatible LLM integration
-Configurable document collection
-Local vector index generation
-Technologies
-Python
-LangChain
-FAISS
-FastAPI
-NVIDIA AI Endpoints
-NVIDIA NIM-compatible models
-PyMuPDF
-Pydantic
-Project Structure
+
+Generated Answer
+
 rag-document-chatbot/
 │
 ├── app/
@@ -72,10 +54,10 @@ rag-document-chatbot/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
+
 Training & Practical Application
 This project was developed as a practical application of concepts learned through NVIDIA Deep Learning Institute (DLI) training in Building RAG Agents with LLMs.
 The training covered concepts including:
-
 Embeddings
 Vector stores
 Semantic retrieval
@@ -93,7 +75,6 @@ cd rag-document-chatbot
 python -m venv .venv
 Activate it:
 macOS / Linux
-
 source .venv/bin/activate
 Windows
 .venv\Scripts\activate
@@ -114,7 +95,6 @@ After adding your PDF documents, run:
 python scripts/build_index.py
 This creates the local FAISS index used by the retrieval pipeline.
 The generated vector index is intentionally excluded from Git tracking.
-
 Run the API
 Start the FastAPI server with:
 uvicorn app.server:app --reload
@@ -133,7 +113,6 @@ This approach helps the chatbot answer questions using information contained in 
 Data and Privacy
 User-provided documents are not included in this repository.
 The repository also excludes:
-
 PDF documents
 FAISS indexes
 Pickle files
@@ -150,4 +129,4 @@ Semantic search
 LangChain
 API development
 AI application development
-The project demonstrates the transition from learning RAG concepts to implementing a structured, reusable document-question-answering application. 
+The project demonstrates the transition from learning RAG concepts to implementing a structured, reusable document-question-answering application.
