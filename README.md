@@ -16,7 +16,7 @@ Instead of relying only on the language model's internal knowledge, the system r
 
 ### RAG Workflow
 
-```text
+
 PDF Documents
       ↓
 Document Processing
@@ -32,7 +32,7 @@ Relevant Document Context
 LLM
       ↓
 Generated Answer
-```text
+
 
 Features
 PDF document ingestion
